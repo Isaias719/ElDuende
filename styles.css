@@ -1,0 +1,418 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('Retro\ Blendy.otf') format('truetype');
+}
+
+body {
+    background-color: #FFEC82;
+    margin: 0;
+    padding-top: 140px; /* Evita que el contenido quede detrás del header fijo */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Barra de navegación */
+.nav-bar {
+    width: 100%;
+    height: auto;
+    min-height: 110px;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 8px solid #018A8C;
+    border-radius: 0px 0px 20px 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.boton {
+    width: 200px;
+    height: auto;
+    min-height: 50px;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    display: flex;
+    justify-self: center;
+    padding: 1rem;
+    border: 6px solid #018A8C;
+    border-radius: 100px;
+    font-family: 'CustomFont', sans-serif;
+    font-size: 27px;
+}
+
+.boton a:link {
+    text-decoration: none;
+    color: #018A8C;
+}
+
+.boton a:visited {
+    text-decoration: none;
+}
+
+.nav-table {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav-table th {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 20px;
+    color: #018A8C;
+    text-align: center;
+    padding: 5px;
+}
+
+.nav-table a {
+    color: #018A8C;
+    text-decoration: none;
+}
+
+.nav-table a:hover {
+    text-decoration: underline;
+}
+
+.nav-logo {
+    width: 90px;
+    height: auto;
+}
+
+/* Títulos generales */
+h1 {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 42px;
+    color: #018A8C;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'CustomFont', sans-serif;
+    size: 20px;
+    color: #018A8C;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Cuadro "Acerca de nosotros" */
+.cuadro1 {
+    width: 90%;
+    max-width: 900px;
+    min-height: 250px;
+    background-color: #FFD806;
+    border-bottom: 8px solid #018A8C;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cuadro1 p {
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Carrusel */
+.carrusel {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
+    border: 5px solid #018A8C;
+    display: flex;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.grupo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 20s infinite linear;
+}
+
+.elemento {
+    padding: 10px;
+    text-align: center;
+}
+
+.elemento img {
+    height: 200px;
+    width: auto;
+    display: block;
+}
+
+/* Tarjetas de Productos */
+.content-bar {
+    width: 90%;
+    max-width: 900px;
+    min-height: 220px;
+    background: #FFD806;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    border-bottom: 8px solid #018A8C;
+    border-right: 8px solid #018A8C;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.content-bar img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-right: 7px solid #018A8C;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-left: 10px;
+}
+
+.prod-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.prod-content h2 {
+    font-family: 'CustomFont', sans-serif;
+    color: #018A8C;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.prod-content p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.full-width {
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    border: 3px solid blue;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.dir {
+    font-size: 40px;
+}
+
+address {
+    font-size: 30px;
+}
+
+.derechos {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #018A8C;
+}
+
+@keyframes spin {
+    from { translate: 0; }
+    to { translate: -100%; }
+}
+
+/* --- ADAPTABILIDAD PARA CELULARES (Responsive) --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 180px;
+    }
+
+    /* Ocultar elementos secundarios de la tabla en móvil para no saturar la barra superior */
+    .nav-table th {
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    .nav-logo {
+        width: 50px;
+    }
+
+    /* Convertir las tarjetas de productos en diseño vertical (columna) */
+    .content-bar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .content-bar img {
+        width: 100%;
+        height: 150px;
+        border-right: none;
+        border-bottom: 7px solid #018A8C;
+        border-radius: 0;
+        margin-left: 0;
+        object-fit: contain;
+    }
+
+    .prod-content p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .cuadro1 p {
+        font-size: 16px;
+    }
+}
+
+.nav-bar-contacto {
+    align-items: left;
+    width: 100%;
+    height: auto;
+    min-height: 110px;
+    background: orange;
+    display: flex;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 8px solid #018A8C;
+    border-radius: 0px 0px 20px 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.todo {
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.pepe {
+    font-size: 40px;
+}
+
+.con-txt {
+    font-size: 30px;
+}
+
+.roto {
+    size: 60px;
+}
+
+.horario {
+    justify-self: center;
+    font-size: 30px;
+    padding: 0;
+    text-decoration: dashed;
+}
+
+.boton2 {
+    width: 200px;
+    height: auto;
+    min-height: 50px;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    display: flex;
+    justify-self: center;
+    padding: 1rem;
+    border: 6px solid #018A8C;
+    border-radius: 100px;
+    font-family: 'CustomFont', sans-serif;
+    font-size: 27px;
+    text-align: center;
+}
+
+.boton2 a:link {
+    text-decoration: none;
+    color: #018A8C;
+}
+
+.boton2 a:visited {
+    text-decoration: none;
+    color: #018A8C;
+}
+
+.boton3 {
+    width: 200px;
+    height: auto;
+    min-height: 50px;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    display: flex;
+    justify-self: center;
+    padding: 1rem;
+    border: 6px solid #018A8C;
+    border-radius: 100px;
+    font-family: 'CustomFont', sans-serif;
+    font-size: 27px;
+    text-align: center;
+}
+
+.boton3 a:link {
+    text-decoration: none;
+    color: #018A8C;
+}
+
+.boton3 a:visited {
+    text-decoration: none;
+    color: #018A8C;
+}
+
+.aviso {
+    width: 90%;
+    max-width: 450px;
+    max-height: 50px;
+    background-color: #ffda0656;
+    border-left: 8px solid orangered;
+    border-radius: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.aviso p {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.contd {
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.condiciones li {
+    justify-items: left;
+    align-self: left;
+    justify-content: left;
+    justify-self: left;
+    font-size: 30px;
+}
